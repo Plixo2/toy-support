@@ -1,0 +1,61 @@
+{
+    "name": "toy-vscode-support",
+    "displayName": "toy Support",
+    "description": "toy Extension for VS Code",
+    "version": "0.0.2",
+    "publisher": "plixo",
+    "repository": {
+        "url": ""
+    },
+    "engines": {
+        "vscode": "^1.64.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "devDependencies": {
+        "typescript": "^4.9.4"
+    },
+    "prettier": {
+        "trailingComma": "es5",
+        "tabWidth": 4,
+        "semi": true,
+        "singleQuote": true,
+        "bracketSpacing": true,
+        "printWidth": 120
+    },
+    "scripts": {
+        "vscode:prepublish": "cd client && npm install && cd .. && npm run compile",
+        "compile": "tsc -b",
+        "watch": "tsc -b -w",
+        "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
+    },
+    "contributes": {
+        "languages": [
+            {
+                "id": "toy",
+                "aliases": [
+                    "toy"
+                ],
+                "extensions": [
+                    ".toy"
+                ],
+                "configuration": "./client/language-configuration.json",
+                "icon": {
+                    "light": "./icons/icon.png",
+                    "dark": "./icons/icon.png"
+                }
+            }
+        ],
+        "grammars": [
+            {
+                "language": "toy",
+                "scopeName": "source.atic",
+                "path": "./client/syntaxes/toy.tmLanguage.json",
+                "embeddedLanguages": {
+                    "meta.embedded.block.html": "html"
+                }
+            }
+        ]
+    }
+}

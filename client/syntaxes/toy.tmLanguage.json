@@ -1,0 +1,60 @@
+{
+    "$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+    "name": "toy",
+    "foldingStartMarker": "\\{\\s*$",
+    "foldingStopMarker": "^\\s*\\}",
+    "patterns": [
+        {
+            "include": "#toy"
+        }
+    ],
+    "repository": {
+        "toy": {
+            "name": "toy.top",
+            "patterns": [
+                {
+                    "include": "#keywords"
+                },
+                {
+                    "include": "#number"
+                },
+                {
+                    "include": "#define"
+                },
+                {
+                    "include": "#comment"
+                }
+            ]
+        },
+        "number": {
+            "match": "\\s*[0-9]+\\s*",
+            "name": "variable.parameter.java"
+        },
+        "define": {
+            "match": "(\\:)([0-9]*)(\\:)([0-9]*)",
+            "captures": {
+                "1": {
+                    "name": "keyword.control.ternary.java"
+                },
+                 "2": {
+                    "name": "variable.other.object.java"
+                },
+                "3": {
+                    "name": "keyword.control.ternary.java"
+                },
+                "4": {
+                    "name": "variable.parameter.java"
+                }
+            }
+        },
+        "comment": {
+            "name": "entity.name.function.java",
+            "match": "\\s*#.*"
+        },
+        "keywords": {
+            "match": "\\s*\\b(STO|LDA|BRZ|ADD|SUB|OR|AND|NOT|INC|DEC|ZRO|NOP)\\b\\s*",
+            "name": "keyword.control.java"
+        }
+    },
+    "scopeName": "source.atic"
+}

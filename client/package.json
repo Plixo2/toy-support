@@ -6,6 +6,10 @@
     "engines": {
         "vscode": "^1.64.0"
     },
+    "scripts": {
+        "compile": "tsc -b",
+        "watch": "tsc -b -w"
+    },
     "categories": [
         "Programming Languages"
     ],

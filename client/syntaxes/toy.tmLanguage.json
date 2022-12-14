@@ -52,7 +52,7 @@
             "match": "\\s*#.*"
         },
         "keywords": {
-            "match": "\\s*\\b(STO|LDA|BRZ|ADD|SUB|OR|AND|NOT|INC|DEC|ZRO|NOP)\\b\\s*",
+            "match": "\\s*\\b(STO|LDA|BRZ|ADD|SUB|OR|AND|NOT|XOR|INC|DEC|ZRO|NOP)\\b\\s*",
             "name": "keyword.control.java"
         }
     },

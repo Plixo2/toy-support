@@ -1,11 +1,12 @@
 {
     "name": "toy-vscode-support",
-    "displayName": "toy Support",
+    "displayName": "Toy Highlight Support",
     "description": "toy Extension for VS Code",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "publisher": "plixo",
+    "icon": "icons/logo.png",
     "repository": {
-        "url": ""
+        "url": "https://github.com/Plixo2/toy-support"
     },
     "engines": {
         "vscode": "^1.64.0"
@@ -26,10 +27,15 @@
     },
     "scripts": {
         "vscode:prepublish": "cd client && npm install && cd .. && npm run compile",
+        "install": "cd client && npm install && tsc -b && cd ../server && npm install && tsc -b && cd .. && tsc -b && npm run compile",
         "compile": "tsc -b",
         "watch": "tsc -b -w",
         "postinstall": "cd client && npm install && cd ../server && npm install && cd .."
     },
+    "activationEvents": [
+        "onStartupFinished"
+    ],
+    "main": "./client/out/extension",
     "contributes": {
         "languages": [
             {

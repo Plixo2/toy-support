@@ -1,8 +1,8 @@
 {
     "name": "toy-vscode-support",
-    "displayName": "Toy Highlight Support",
-    "description": "toy Extension for VS Code",
-    "version": "0.0.3",
+    "displayName": "Toy CPU Support",
+    "description": "Toy Extension for VS Code",
+    "version": "0.1.4",
     "publisher": "plixo",
     "icon": "icons/logo.png",
     "repository": {

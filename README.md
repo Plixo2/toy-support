@@ -1,2 +1,3 @@
-# Visual Studio Code Toy Language Support
+# Toy CPU Language Support
 
+![Preview](icons/preview.png)
